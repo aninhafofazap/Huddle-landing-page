@@ -3,15 +3,16 @@
 /*cores*/
 :root {
     /*primário*/
-    --pink:hs1(324, 100%, 44%);
-    --light-pink:hs1(321, 100%, 78%);
-    --light-red:hs1(0, 100%, 63%);
+    --pink: hsl(324, 100%, 44%);
+    --black: #303030;
+    --light-pink: hsl(321, 100%, 78%);
+    --light-red: hsl(0, 100%, 63%);
     /*neutro*/
-    --very-dark-cyan:hs1(192, 100%,  78%);
-    --very-pale-blue:hs1(207, 100%, 98%)
+    --very-dark-cyan: hsl(192, 100%, 78%);
+    --very-pale-blue: hsl(207, 100%, 98%);
 }
-/*cores*/
 
+/*cores*/
 
 /*reset setting*/
 
@@ -23,7 +24,7 @@
     padding: 0;
 }
 
-:focus{
+:focus {
     outline: none;
 }
 
@@ -33,9 +34,9 @@ img {
     display: block;
 }
 
-body{
+body {
     font-family: 'Open Sans',
-    sans-serif;
+        sans-serif;
     font-size: 1rem;
     min-height: 100vh;
     text-rendering: optimizeSpeed;
@@ -47,9 +48,10 @@ a {
     text-decoration: none;
 }
 
-li{
+li {
     list-style: none;
 }
+
 /*fim da reset setting*/
 
 
@@ -64,11 +66,10 @@ h6 {
     color: var(--very-dark-cyan);
 }
 
-h2{
-    font-family: 'Open Sans',
-    sans-serif;
+h2 {
+    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
-    color: var(--very-dark-cyan);
+    color: var(--black);
 }
 
 p {
@@ -77,7 +78,7 @@ p {
 
 .btn {
     background-color: var(--pink);
-    color: hs1(0, 0%, 100%);
+    color: hsl(0, 0%, 100%);
     padding: .9rem 3.2rem;
     border-radius: 5rem;
     font-weight: 600;
@@ -89,13 +90,14 @@ p {
 
 .btn:hover,
 .btn:focus {
-     filter: brightness(1.4);
+    filter: brightness(1.4);
 }
+
 /*Fim global setting*/
 
 
 /*header section*/
-.header-container{
+.header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -103,43 +105,46 @@ p {
     margin-top: 2rem;
 }
 
-.header-logo{
+.header-logo {
     width: 8.438rem;
 }
 
-.header-btn{
+.header-btn {
     text-transform: capitalize;
-    color: hs1(324, 100%, 44%);
-    border: 2px solid hs1(324, 100%, 44%);
+    color: hsl(324, 100%, 44%);
+    border: 2px solid var(--pink);
     padding: .2rem 1.2rem;
     border-radius: 5rem;
     font-weight: 600;
-    transition: 0.6s cubic-bezier(0.37, 0, 0.63, 1);
+    transition: 0.3s background;
 }
 
 .header-btn:hover,
-.header-btn:focus{
+.header-btn:focus {
+    background-color: var(--pink);
+    color: #FFFFFF;
     filter: brightness(1.4);
 }
+
 /*Fim header section*/
 
 
 /*comunity section*/
-.comunity{
+.comunity {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.comunity h1{
+.comunity h1 {
     text-align: center;
     padding: 1rem 1.5rem;
     margin-top: 4rem;
     font-size: 1.8rem;
 }
 
-.comunity p{
+.comunity p {
     text-align: center;
     padding: 1rem 1.3rem;
 }
@@ -148,39 +153,40 @@ p {
     margin-top: 2.5rem;
 }
 
-.mockups{
+.mockups {
     margin-top: 4rem;
     padding: 2rem 1..5rem;
 }
 
-.response-all{
+.response-all {
     margin: 3rem 0;
 }
 
-.response{
+.response {
     margin-bottom: 5.5rem;
 }
 
-.response-desc{
+.response-desc {
     display: flex;
     flex-direction: column;
 }
 
-.response h2{
+.response h2 {
     font-size: 4.2rem;
 }
 
-.response-desc span{
+.response-desc span {
     font-size: 1.1rem;
     align-self: center;
     color: var(--very-dark-cyan);
 }
+
 /*Fim comunity section*/
 
 
 /*services section*/
 
-.services{
+.services {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -190,12 +196,12 @@ p {
 }
 
 .card-1,
-.card-3{
+.card-3 {
     background-color: var(--very-pale-blue);
     width: 100%;
 }
 
-.card-2{
+.card-2 {
     margin-bottom: 5rem;
 }
 
@@ -206,7 +212,7 @@ p {
     transform: scaleY(1.1);
 }
 
-.bottom picture img{
+.bottom picture img {
     width: 100%;
     top: 100%;
     position: absolute;
@@ -215,30 +221,31 @@ p {
 
 .grow-img,
 .flowing-img,
-.users-img{
+.users-img {
     padding: 5.5rem 2rem;
 }
 
-.service-desc{
+.service-desc {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.service h3{
+.service h3 {
     font-size: 1.5rem;
 }
 
-.service-desc p{
+.service-desc p {
     padding: 1rem .9rem;
     text-align: center;
     margin-bottom: 1.5rem;
 }
+
 /*Fim services section*/
 
 /*Build section*/
-.build{
+.build {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -246,15 +253,16 @@ p {
     margin-top: 13rem;
 }
 
-.build h4{
+.build h4 {
     font-size: 1.8rem;
     text-align: center;
     margin-bottom: 2rem;
 }
+
 /*Fim build section*/
 
 /*Footer section*/
-.footer-container{
+.footer-container {
     background-color: var(--very-dark-cyan);
     padding: 3rem 1.3rem;
     margin-top: 16rem;
@@ -262,35 +270,35 @@ p {
     position: relative;
 }
 
-.top picture img{
+.top picture img {
     width: 100%;
     bottom: 100%;
     left: 0;
     position: absolute;
 }
 
-footer p{
+footer p {
     color: var(--very-pale-blue);
 }
 
-.newsletter{
+.newsletter {
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-.newsletter h5{
+.newsletter h5 {
     font-size: 1.6rem;
     text-transform: uppercase;
     color: var(--very-pale-blue);
     margin-bottom: 1rem;
 }
 
-.newsletter p{
+.newsletter p {
     margin-bottom: 1.5rem;
 }
 
-.email-info .email-add{
+.email-info .email-add {
     padding: 1rem 1.5rem;
     font-size: .8rem;
     border: none;
@@ -300,9 +308,9 @@ footer p{
     cursor: pointer;
 }
 
-.newsletter-bottom{
+.newsletter-bottom {
     background-color: var(--pink);
-    color: hs1(0, 0%, 100%);
+    color: hsl(0, 0%, 100%);
     border: none;
     padding: 1rem 2.5rem;
     border-radius: .3rem;
@@ -314,26 +322,26 @@ footer p{
 }
 
 .newsletter-button:hover,
-.newsletter-bottom:focus{
+.newsletter-bottom:focus {
     filter: brightness(1.4);
 }
 
-.footer-logo{
+.footer-logo {
     margin-top: 8rem;
     filter: brightness(0) invert(1);
     width: 200px;
 }
 
-.all-info p{
+.all-info p {
     margin-top: 1.2rem;
 }
 
-.contact-add{
+.contact-add {
     padding: 2rem 0;
 }
 
 .phone,
-.email{
+.email {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -343,33 +351,33 @@ footer p{
 .phone a:hover,
 .phone a:focus,
 .email a:hover,
-.email a:focus{
+.email a:focus {
     text-decoration: underline;
 }
 
 .phone a,
-.email a{
+.email a {
     color: var(--very-pale-blue);
 }
 
-.social-icons{
+.social-icons {
     display: flex;
     align-items: center;
     gap: 1.5rem;
 }
 
-.social-icons a{
+.social-icons a {
     font-size: 2rem;
     color: var(--very-pale-blue);
     transition: 0.6s cubic-bezier(0.37, 0, 0.63, 1);
 }
 
 .social-icons a:hover,
-.social-icons a:focus{
-    color: hs1(191, 94%, 48%);
+.social-icons a:focus {
+    color: hsl(191, 94%, 48%);
 }
 
-.attribution{
+.attribution {
     font-size: 11px;
     text-align: center;
     background-color: var(--very-dark-cyan);
@@ -378,25 +386,28 @@ footer p{
 .attribution a {
     color: var(--pink);
 }
+
 /*Fim footer section*/
 
 /*Media query*/
-@media only screen and (min-width: 920px){
-    .comunity h1{
+@media only screen and (min-width: 920px) {
+    .comunity h1 {
         font-size: 2.5rem;
         margin-top: 7rem;
     }
-    .comunity p{
+
+    .comunity p {
         max-width: 520px;
     }
-    .response-all{
+
+    .response-all {
         column-count: 2;
         gap: 25rem;
         margin-top: 5rem;
     }
-    
+
     .card-1 .wrapper,
-    .card-3 .wrapper{
+    .card-3 .wrapper {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -404,7 +415,7 @@ footer p{
         padding: 0.2 1rem;
     }
 
-    .card-2{
+    .card-2 {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -413,16 +424,17 @@ footer p{
     }
 
     .grow-img,
-    .flowing-img{
+    .flowing-img {
         flex: 1;
         max-width: 700px;
     }
 
-.service-desc{
-    flex: 1;
-    max-width: 600px;
-}
-    .service-desc h3{
+    .service-desc {
+        flex: 1;
+        max-width: 600px;
+    }
+
+    .service-desc h3 {
         text-align: left;
         font-size: 1.8rem;
         align-self: flex-start;
@@ -431,42 +443,42 @@ footer p{
 
     .card-1 p,
     .card-2 p,
-    .card-3 p{
+    .card-3 p {
         text-align: left;
     }
 
-    .build{
+    .build {
         margin: 20rem;
     }
 
-    .footer-container{
+    .footer-container {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: row-reverse;
     }
 
-    .newsletter{
+    .newsletter {
         flex: 1;
         max-width: 600px;
     }
 
-    .all-info{
+    .all-info {
         flex: 1;
         max-width: 600px;
     }
 
     .newsletter p,
-    .all-info p{
+    .all-info p {
         max-width: 400px;
     }
 
-    .email-info{
+    .email-info {
         display: flex;
         gap: 2rem;
     }
 
-    .email-info .email-add{
+    .email-info .email-add {
         padding: 1rem 1.5rem;
         font-size: .8rem;
         border: none;
@@ -476,4 +488,5 @@ footer p{
         cursor: pointer;
     }
 }
+
 /*Fim media query*/
